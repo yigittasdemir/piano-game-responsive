@@ -1,13 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff; 
+}
+header{
+  background-color: #1A1A40;
+  width: 100%;
+  position: fixed;
+  margin: 0px 0px;
+  z-index: 99;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+header ul {
+  display: flex;
+  margin: 35px 0px;
+}
+header ul li{
+  margin: 0px 30px;
+  list-style: none;
+}
+header ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+}
+header ul li a:hover{
+  color: #7A0BC0;
+}
+header .coin{
+  display: flex;
+  margin: 10px 50px;
+}
+header .coin img{
+  width: 60px;
+  margin: 0px 0px;
+}
+header .coin p{
+  color: white;
+  font-size: 18px;
+  margin: 25px 0px;
+  font-family: 'Press Start 2P', cursive;
+}
+.welcome-container{
+  background-color: #7A0BC0;
+  width: 100%;
+  height: 790px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-container .welcome{
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 10px solid #1A1A40;
+  box-shadow: 5px 5px 15px 5px #fff;
+  line-height: 30px;
+  padding: 10px 10px;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 2;
+}
+.welcome-container .welcome p{
+  color: #7A0BC0;
+}
+.welcome-container img{
+  width: 1000px;
+  position: absolute;
+}
+.welcome-container .view-all{
+  position: absolute;
+  z-index: 3;
+  margin-top: 360px;
+}
+.welcome-container .view-all button{
+  width: 450px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 8px solid #1A1A40;
+  font-size: 17px;
+  color: #7A0BC0;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+.games-container{
+  position: absolute;
+  width: 100%;
+  margin: 0px 0px;
+  height: 790px;
+  background-color: #7A0BC0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.games-container .games{
+  flex-wrap: wrap;
+  margin: 30px 0px;
+  justify-content: center;
+  display: flex;
+  width: 950px;
+}
+.games-container .game{
+  background-color: #FA58B6;
+  margin: 10px 20px;
+  width: 250px;
+  border-radius: 10px;
+  border: 8px solid #1A1A40;
+  text-align: center;
+  height: 330px;
+}
+.games-container .games .game .game-info{
+  padding: 15px 5px;
+}
+.games-container .game img{
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.games-container .games .game h3{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: #fff;
+}
+.games-container .games .game button{
+  width: 150px;
+  height: 40px;
+  border: 5px solid #1A1A40;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+}
+.games-container .games .game button a{
+  text-decoration: none;
+  color: #1A1A40;
+}
+footer{
+  position: absolute;
+  width: 100%;
+  margin: 790px 0px;
+  background-color: #1A1A40;
+  height: 90px;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0px;
+}
+footer ul li{
+  list-style: none;
+  margin: 0px 30px;
+}
+footer ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+}
+.game-container{
+  background-color: #7A0BC0;
+  width: 100%;
+  position: absolute;
+  height: 790px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-container .piano{
+  background-color: #fff;
+  width: 650px;
+  border-radius: 20px;
+  border: 10px solid #1A1A40;
+  height: 400px;
+}
+.game-container .piano button{
+  padding: 10px;
+  margin: 10px 30px;
+  width: 25px;
+  height: 300px;
+  background-color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (max-width: 768px) {
+  .welcome-container{width: 150%}
+  .game-container{width: 150%; margin: -5px 0px;}
+  footer{width: 150%; margin: 780px 0px;}
+}
+@media only screen and (max-width: 425px) {
+  header{width: 100%; height: 120px; margin-top: -38px;}
+  header ul{margin: 50px 0px;}
+  header .coin{margin: 0px 60px;}
+  header .coin img{width: 100px; height: 90px; margin: 10px 0px;}
+  header .coin p{margin: 40px 0px; font-size: 29px;}
+  .welcome-container{width: 1000px; height: 900px; margin-top: 30px;}
+  .welcome-container img{width: 950px;}
+  .game-container{width: 1000px; margin: -5px 0px; height: 1395px;}
+  .game-container .piano{margin-top: -200px;}
+  footer{width: 235%; margin: 1390px 0px;}
+}
+@media only screen and (max-width: 375px){
+  header{margin: -100px 0px;}
+  .welcome-container{margin: 100px 0px;}
+  .game-container{height: 1645px; margin: -102px 0px;}
+  footer{margin: 1542px 0px; width: 267%;}
 }
